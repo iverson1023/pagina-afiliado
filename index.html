@@ -67,7 +67,8 @@ align-items:center;
 width:100%;
 border-radius:16px;
 }
-.media-grid video{
+.media-grid video,
+.media-grid iframe{
 width:100%;
 border-radius:16px;
 aspect-ratio:9/16;
@@ -90,6 +91,34 @@ gap:25px;
 .kit img{
 width:100%;
 max-width:180px;
+margin-bottom:15px;
+}
+
+/* PROVA SOCIAL */
+.social-proof{
+background:#fff;
+border-radius:16px;
+padding:40px 25px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.testimonial{
+background:#f7f8fa;
+padding:25px;
+border-radius:14px;
+}
+
+.stars{
+color:#ffb400;
+font-size:1.1rem;
+margin-bottom:10px;
 }
 
 /* BOTÃO FLUTUANTE */
@@ -135,12 +164,10 @@ Check Availability Now
 <section>
 <div class="box media-grid">
 
-<!-- IMAGEM ESQUERDA -->
 <img src="URL_IMAGEM_LADO_ESQUERDO_AQUI" alt="Mitolyn Presentation">
 
-<!-- VIDEO DIREITA -->
-<video controls poster="thumb.jpg">
-<source src="apresentacao.mp4" type="video/mp4">
+<video controls>
+<source src="CAMINHO_DO_VIDEO_DA_PLATAFORMA" type="video/mp4">
 </video>
 
 </div>
@@ -151,6 +178,44 @@ Check Availability Now
 <div class="box">
 <h2>Premium Natural Formula</h2>
 <p>Designed to support mitochondrial health and sustainable weight loss.</p>
+</div>
+</section>
+
+<!-- PROVA SOCIAL -->
+<section>
+<div class="social-proof">
+<h2 style="text-align:center;">Real People. Real Results.</h2>
+<p style="text-align:center;">Thousands are already supporting their metabolism with Mitolyn.</p>
+
+<div class="testimonials">
+
+<div class="testimonial">
+<div class="stars">★★★★★</div>
+<p>
+“I started feeling more energy in the first weeks.
+My cravings dropped and weight loss finally became consistent.”
+</p>
+<strong>— Sarah M., California</strong>
+</div>
+
+<div class="testimonial">
+<div class="stars">★★★★★</div>
+<p>
+“No side effects, no jitters.
+Just steady results and better metabolism support.”
+</p>
+<strong>— Daniel R., Texas</strong>
+</div>
+
+<div class="testimonial">
+<div class="stars">★★★★★</div>
+<p>
+“I’ve tried many supplements, but Mitolyn is the only one that truly worked for me.”
+</p>
+<strong>— Emily K., Florida</strong>
+</div>
+
+</div>
 </div>
 </section>
 
