@@ -26,6 +26,7 @@ color:#222;
 line-height:1.6;
 }
 
+/* HERO */
 .hero{
 background:
 linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
@@ -63,35 +64,28 @@ grid-template-columns:1fr 1fr;
 gap:30px;
 align-items:center;
 }
+
 .media-grid img{
 width:100%;
 border-radius:16px;
 }
-.media-grid video,
-.media-grid iframe{
+
+/* VIDEO REDUZIDO */
+.media-grid video{
 width:100%;
+max-width:280px;
+margin:auto;
 border-radius:16px;
 aspect-ratio:9/16;
 object-fit:cover;
+box-shadow:0 8px 20px rgba(0,0,0,.2);
 }
 
 /* FUNDO PRODUTO */
 .bg-product{
 background:
-linear-gradient(rgba(255,255,255,.9),rgba(255,255,255,.9)),
+linear-gradient(rgba(255,255,255,.92),rgba(255,255,255,.92)),
 url('URL_FUNDO_PRODUTO_AQUI') center/cover no-repeat;
-}
-
-/* KITS */
-.kits{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-}
-.kit img{
-width:100%;
-max-width:180px;
-margin-bottom:15px;
 }
 
 /* PROVA SOCIAL */
@@ -121,10 +115,23 @@ font-size:1.1rem;
 margin-bottom:10px;
 }
 
+/* KITS */
+.kits{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.kit img{
+width:100%;
+max-width:180px;
+margin-bottom:15px;
+}
+
 /* BOTÃO FLUTUANTE */
 .floating-btn{
 position:fixed;
-bottom:20px;
+bottom:90px;
 right:20px;
 z-index:999;
 background:#ff5722;
@@ -134,6 +141,37 @@ border-radius:50px;
 font-weight:bold;
 text-decoration:none;
 box-shadow:0 8px 20px rgba(0,0,0,.3);
+}
+
+/* COOKIE CTA */
+.cookie-bar{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#111;
+color:#fff;
+padding:18px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+z-index:1000;
+}
+
+.cookie-bar p{
+margin:0;
+font-size:.95rem;
+}
+
+.cookie-bar a{
+background:#ffca28;
+color:#000;
+padding:12px 22px;
+border-radius:30px;
+font-weight:bold;
+text-decoration:none;
+white-space:nowrap;
 }
 
 footer{
@@ -146,12 +184,14 @@ font-size:.85rem;
 
 @media(max-width:768px){
 .media-grid{grid-template-columns:1fr;}
+.media-grid video{max-width:240px;}
 }
 </style>
 </head>
 
 <body>
 
+<!-- HERO -->
 <div class="hero">
 <h1>Still Struggling to Lose Weight Even Eating Healthy?</h1>
 <p>Support your metabolism and energy at the cellular level.</p>
@@ -173,11 +213,12 @@ Check Availability Now
 </div>
 </section>
 
-<!-- FUNDO PRODUTO -->
+<!-- FUNDO PRODUTO (SEM TEXTO) -->
 <section class="bg-product">
 <div class="box">
-<h2>Premium Natural Formula</h2>
-<p>Designed to support mitochondrial health and sustainable weight loss.</p>
+<p>
+Designed to support mitochondrial health and sustainable weight loss.
+</p>
 </div>
 </section>
 
@@ -185,33 +226,24 @@ Check Availability Now
 <section>
 <div class="social-proof">
 <h2 style="text-align:center;">Real People. Real Results.</h2>
-<p style="text-align:center;">Thousands are already supporting their metabolism with Mitolyn.</p>
 
 <div class="testimonials">
 
 <div class="testimonial">
 <div class="stars">★★★★★</div>
-<p>
-“I started feeling more energy in the first weeks.
-My cravings dropped and weight loss finally became consistent.”
-</p>
+<p>“My energy increased and fat loss finally became consistent.”</p>
 <strong>— Sarah M., California</strong>
 </div>
 
 <div class="testimonial">
 <div class="stars">★★★★★</div>
-<p>
-“No side effects, no jitters.
-Just steady results and better metabolism support.”
-</p>
+<p>“No crashes, no stimulants. Just real results.”</p>
 <strong>— Daniel R., Texas</strong>
 </div>
 
 <div class="testimonial">
 <div class="stars">★★★★★</div>
-<p>
-“I’ve tried many supplements, but Mitolyn is the only one that truly worked for me.”
-</p>
+<p>“Mitolyn truly surprised me. Highly recommended.”</p>
 <strong>— Emily K., Florida</strong>
 </div>
 
@@ -240,25 +272,4 @@ Just steady results and better metabolism support.”
 
 <div class="box kit">
 <img src="KIT_6_IMAGEM_AQUI">
-<h3>6 Bottles 💰 Best Value</h3>
-<strong>$294</strong><br>
-<a class="btn" href="https://f08f1iybmayhcqbcrstezm5vbw.hop.clickbank.net" target="_blank">Buy Now</a>
-</div>
-
-</div>
-</section>
-
-<!-- BOTÃO FLUTUANTE -->
-<a class="floating-btn"
-href="https://f08f1iybmayhcqbcrstezm5vbw.hop.clickbank.net"
-target="_blank">
-🛒 Buy Now
-</a>
-
-<footer>
-<p>This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
-<p>© 2026 Mitolyn™ – All Rights Reserved</p>
-</footer>
-
-</body>
-</html>
+<h3>6 Bottles 💰
