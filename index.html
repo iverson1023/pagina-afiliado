@@ -44,7 +44,6 @@ border-radius:16px;
 padding:30px;
 box-shadow:0 10px 25px rgba(0,0,0,.08);
 margin-bottom:30px;
-text-align:center;
 }
 
 .btn{
@@ -71,14 +70,15 @@ width:100%;
 border-radius:16px;
 }
 
+/* VIDEO REDUZIDO */
 .media-grid video{
 width:100%;
-max-width:260px;
+max-width:280px;
 margin:auto;
 border-radius:16px;
 aspect-ratio:9/16;
 object-fit:cover;
-box-shadow:0 8px 20px rgba(0,0,0,.25);
+box-shadow:0 8px 20px rgba(0,0,0,.2);
 }
 
 /* FUNDO PRODUTO */
@@ -89,10 +89,18 @@ url('URL_FUNDO_PRODUTO_AQUI') center/cover no-repeat;
 }
 
 /* PROVA SOCIAL */
+.social-proof{
+background:#fff;
+border-radius:16px;
+padding:40px 25px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
 .testimonials{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:25px;
+margin-top:30px;
 }
 
 .testimonial{
@@ -101,7 +109,11 @@ padding:25px;
 border-radius:14px;
 }
 
-.stars{color:#ffb400;margin-bottom:10px;}
+.stars{
+color:#ffb400;
+font-size:1.1rem;
+margin-bottom:10px;
+}
 
 /* KITS */
 .kits{
@@ -116,13 +128,7 @@ max-width:180px;
 margin-bottom:15px;
 }
 
-/* KIT DESTAQUE */
-.best-value{
-border:3px solid #ffca28;
-transform:scale(1.03);
-}
-
-/* BOTÃO FLUTUANTE BUY NOW */
+/* BOTÃO FLUTUANTE */
 .floating-btn{
 position:fixed;
 bottom:90px;
@@ -130,7 +136,7 @@ right:20px;
 z-index:999;
 background:#ff5722;
 color:#fff;
-padding:16px 24px;
+padding:16px 22px;
 border-radius:50px;
 font-weight:bold;
 text-decoration:none;
@@ -153,13 +159,19 @@ gap:20px;
 z-index:1000;
 }
 
+.cookie-bar p{
+margin:0;
+font-size:.95rem;
+}
+
 .cookie-bar a{
 background:#ffca28;
 color:#000;
-padding:12px 24px;
+padding:12px 22px;
 border-radius:30px;
 font-weight:bold;
 text-decoration:none;
+white-space:nowrap;
 }
 
 footer{
@@ -172,6 +184,7 @@ font-size:.85rem;
 
 @media(max-width:768px){
 .media-grid{grid-template-columns:1fr;}
+.media-grid video{max-width:240px;}
 }
 </style>
 </head>
@@ -191,7 +204,7 @@ Check Availability Now
 <section>
 <div class="box media-grid">
 
-<img src="URL_IMAGEM_LADO_ESQUERDO_AQUI" alt="Mitolyn">
+<img src="URL_IMAGEM_LADO_ESQUERDO_AQUI" alt="Mitolyn Presentation">
 
 <video controls>
 <source src="CAMINHO_DO_VIDEO_DA_PLATAFORMA" type="video/mp4">
@@ -200,7 +213,94 @@ Check Availability Now
 </div>
 </section>
 
-<!-- FUNDO PRODUTO -->
+<!-- FUNDO PRODUTO (SEM TEXTO) -->
 <section class="bg-product">
 <div class="box">
-<p>Designed to support mitochondrial heal
+<p>
+Designed to support mitochondrial health and sustainable weight loss.
+</p>
+</div>
+</section>
+
+<!-- PROVA SOCIAL -->
+<section>
+<div class="social-proof">
+<h2 style="text-align:center;">Real People. Real Results.</h2>
+
+<div class="testimonials">
+
+<div class="testimonial">
+<div class="stars">★★★★★</div>
+<p>“My energy increased and fat loss finally became consistent.”</p>
+<strong>— Sarah M., California</strong>
+</div>
+
+<div class="testimonial">
+<div class="stars">★★★★★</div>
+<p>“No crashes, no stimulants. Just real results.”</p>
+<strong>— Daniel R., Texas</strong>
+</div>
+
+<div class="testimonial">
+<div class="stars">★★★★★</div>
+<p>“Mitolyn truly surprised me. Highly recommended.”</p>
+<strong>— Emily K., Florida</strong>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- KITS -->
+<section>
+<h2 style="text-align:center;">Choose Your Package</h2>
+<div class="kits">
+
+<div class="box kit">
+<img src="KIT_1_IMAGEM_AQUI">
+<h3>1 Bottle</h3>
+<strong>$69</strong><br>
+<a class="btn" href="https://f08f1iybmayhcqbcrstezm5vbw.hop.clickbank.net" target="_blank">Buy Now</a>
+</div>
+
+<div class="box kit">
+<img src="KIT_3_IMAGEM_AQUI">
+<h3>3 Bottles ⭐ Most Popular</h3>
+<strong>$177</strong><br>
+<a class="btn" href="https://f08f1iybmayhcqbcrstezm5vbw.hop.clickbank.net" target="_blank">Buy Now</a>
+</div>
+
+<div class="box kit">
+<img src="KIT_6_IMAGEM_AQUI">
+<h3>6 Bottles 💰 Best Value</h3>
+<strong>$294</strong><br>
+<a class="btn" href="https://f08f1iybmayhcqbcrstezm5vbw.hop.clickbank.net" target="_blank">Buy Now</a>
+</div>
+
+</div>
+</section>
+
+<!-- BOTÃO FLUTUANTE -->
+<a class="floating-btn"
+href="https://f08f1iybmayhcqbcrstezm5vbw.hop.clickbank.net"
+target="_blank">
+🛒 Buy Now
+</a>
+
+<!-- COOKIE CTA -->
+<div class="cookie-bar">
+<p>
+We use cookies to improve your experience and show relevant offers.
+</p>
+<a href="https://f08f1iybmayhcqbcrstezm5vbw.hop.clickbank.net" target="_blank">
+Accept & Continue
+</a>
+</div>
+
+<footer>
+<p>This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+<p>© 2026 Mitolyn™ – All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
