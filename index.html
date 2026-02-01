@@ -19,7 +19,7 @@ gtag('config', 'G-XXXXXXXXXX');
 /* SCROLL EVENT */
 window.addEventListener('scroll', function() {
   if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight * 0.75) {
-    gtag('event', 'scroll_75', { 'event_category': 'engagement' });
+    gtag('event', 'scroll_75', { event_category: 'engagement' });
   }
 });
 </script>
@@ -32,14 +32,22 @@ background:#f7f8fa;
 color:#222;
 line-height:1.6;
 }
-header{
-background:linear-gradient(135deg,#7b1fa2,#9c27b0);
+
+/* HERO COM FUNDO */
+.hero{
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url('URL_DA_IMAGEM_DE_FUNDO_AQUI') center/cover no-repeat;
 color:#fff;
-padding:60px 20px;
+padding:90px 20px;
 text-align:center;
 }
-header h1{font-size:2.2rem;margin-bottom:10px;}
+
+.hero h1{font-size:2.4rem;max-width:900px;margin:auto;}
+.hero p{font-size:1.1rem;margin-top:15px;}
+
 section{padding:50px 20px;max-width:1100px;margin:auto;}
+
 .box{
 background:#fff;
 border-radius:16px;
@@ -48,6 +56,7 @@ box-shadow:0 10px 25px rgba(0,0,0,.08);
 margin-bottom:30px;
 text-align:center;
 }
+
 .btn{
 display:inline-block;
 padding:16px 36px;
@@ -58,16 +67,22 @@ border-radius:30px;
 text-decoration:none;
 margin-top:20px;
 }
+
+/* VÍDEO */
 .video iframe{
 width:100%;
 height:420px;
 border-radius:16px;
 border:none;
 }
+
+/* PRODUTO */
 .product img{
 max-width:320px;
 width:100%;
 }
+
+/* KITS */
 .kits{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -76,6 +91,34 @@ gap:25px;
 .highlight{
 border:3px solid #ffca28;
 }
+
+/* PROVAS SOCIAIS */
+.social-proof{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+.stat{
+background:#f1f1f1;
+border-radius:14px;
+padding:25px;
+font-weight:bold;
+}
+
+/* DEPOIMENTOS */
+.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+.testimonial{
+background:#fff;
+border-radius:14px;
+padding:25px;
+box-shadow:0 8px 18px rgba(0,0,0,.08);
+text-align:left;
+}
+
 footer{
 background:#111;
 color:#aaa;
@@ -88,44 +131,81 @@ font-size:.85rem;
 
 <body>
 
-<header>
+<!-- HERO -->
+<div class="hero">
 <h1>Still Struggling to Lose Weight Even Eating Healthy?</h1>
-<p>Mitolyn supports metabolism, energy & fat burning at the cellular level.</p>
+<p>Support your metabolism, energy and fat burning at the cellular level.</p>
 <a class="btn" href="https://f08f1iybmayhcqbcrstezm5vbw.hop.clickbank.net"
-onclick="gtag('event','cta_click',{event_category:'button'});" target="_blank">
+onclick="gtag('event','hero_cta',{event_category:'button'});" target="_blank">
 Check Availability Now
 </a>
-</header>
+</div>
 
 <!-- VSL -->
 <section>
 <div class="box video">
-<h2>Watch This Short Video Before Ordering</h2>
+<h2>Watch How Mitolyn Works</h2>
 <iframe src="https://www.youtube.com/embed/SEU_VIDEO_AQUI"
-onload="gtag('event','video_view',{event_category:'video'});"
-allowfullscreen></iframe>
+onload="gtag('event','video_view',{event_category:'video'});" allowfullscreen></iframe>
 </div>
 </section>
 
-<!-- PRODUTO -->
+<!-- IMAGEM DO PRODUTO -->
 <section>
 <div class="box product">
-<h2>Powerful Natural Formula</h2>
-<img src="https://via.placeholder.com/320x420.png?text=Mitolyn+Bottle" alt="Mitolyn">
-<p>Designed to support mitochondrial health, metabolism and sustainable weight loss.</p>
+<h2>Premium Natural Formula</h2>
+<img src="URL_IMAGEM_PRODUTO_AQUI" alt="Mitolyn Bottle">
+<p>Designed to support mitochondrial health and sustainable weight loss.</p>
+</div>
+</section>
+
+<!-- PROVAS SOCIAIS NUMÉRICAS -->
+<section>
+<h2 style="text-align:center;">Trusted Worldwide</h2>
+<div class="social-proof">
+<div class="stat">⭐ 4.8/5 Average Rating</div>
+<div class="stat">👥 150,000+ Happy Customers</div>
+<div class="stat">🌍 Sold in 60+ Countries</div>
+<div class="stat">🏭 Made in GMP Certified Facilities</div>
 </div>
 </section>
 
 <!-- BENEFÍCIOS -->
 <section>
 <div class="box">
-<h2>How Mitolyn Works</h2>
+<h2>How Mitolyn Supports Your Body</h2>
 <ul style="text-align:left;max-width:600px;margin:auto;">
 <li>✔ Boosts mitochondrial energy production</li>
 <li>✔ Helps convert fat into usable energy</li>
 <li>✔ Supports metabolism without stimulants</li>
-<li>✔ Improves daily energy & focus</li>
+<li>✔ Improves focus, energy and vitality</li>
 </ul>
+</div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section>
+<h2 style="text-align:center;">Real People. Real Results.</h2>
+<div class="testimonials">
+
+<div class="testimonial">
+⭐⭐⭐⭐⭐
+<p>“After just a few weeks, my energy skyrocketed and the scale finally moved.”</p>
+<strong>— Sarah M., Texas</strong>
+</div>
+
+<div class="testimonial">
+⭐⭐⭐⭐⭐
+<p>“No jitters, no crash. I feel lighter, more active and motivated.”</p>
+<strong>— Michael R., Florida</strong>
+</div>
+
+<div class="testimonial">
+⭐⭐⭐⭐⭐
+<p>“I was skeptical, but Mitolyn truly surprised me. Highly recommended.”</p>
+<strong>— Denise L., California</strong>
+</div>
+
 </div>
 </section>
 
@@ -138,11 +218,9 @@ allowfullscreen></iframe>
 <h3>1 Bottle</h3>
 <p>30 Day Supply</p>
 <strong>$69</strong>
-<p>Great to try Mitolyn</p>
+<p>Perfect to try</p>
 <a class="btn" href="https://f08f1iybmayhcqbcrstezm5vbw.hop.clickbank.net"
-onclick="gtag('event','buy_1',{event_category:'purchase'});" target="_blank">
-Buy Now
-</a>
+onclick="gtag('event','buy_1',{event_category:'purchase'});" target="_blank">Buy Now</a>
 </div>
 
 <div class="box highlight">
@@ -151,20 +229,16 @@ Buy Now
 <strong>$177</strong>
 <p>Best balance of results & savings</p>
 <a class="btn" href="https://f08f1iybmayhcqbcrstezm5vbw.hop.clickbank.net"
-onclick="gtag('event','buy_3',{event_category:'purchase'});" target="_blank">
-Buy Now
-</a>
+onclick="gtag('event','buy_3',{event_category:'purchase'});" target="_blank">Buy Now</a>
 </div>
 
 <div class="box">
 <h3>6 Bottles 💰 Best Value</h3>
 <p>180 Day Supply</p>
 <strong>$294</strong>
-<p>Maximum results + biggest discount</p>
+<p>Maximum results & biggest discount</p>
 <a class="btn" href="https://f08f1iybmayhcqbcrstezm5vbw.hop.clickbank.net"
-onclick="gtag('event','buy_6',{event_category:'purchase'});" target="_blank">
-Buy Now
-</a>
+onclick="gtag('event','buy_6',{event_category:'purchase'});" target="_blank">Buy Now</a>
 </div>
 
 </div>
@@ -174,14 +248,14 @@ Buy Now
 <section>
 <div class="box">
 <h2>180-Day Money Back Guarantee</h2>
-<p>If you’re not satisfied for any reason, ClickBank® guarantees a full refund within 180 days.</p>
+<p>Your purchase is fully protected by ClickBank®. Try Mitolyn risk-free.</p>
 </div>
 </section>
 
 <!-- CTA FINAL -->
 <section style="text-align:center;">
 <h2>Limited Stock Available</h2>
-<p>Due to high demand, discounts may end at any time.</p>
+<p>High demand may cause temporary shortages.</p>
 <a class="btn" href="https://f08f1iybmayhcqbcrstezm5vbw.hop.clickbank.net"
 onclick="gtag('event','final_cta',{event_category:'button'});" target="_blank">
 Secure My Order Now
